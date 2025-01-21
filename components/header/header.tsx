@@ -1,31 +1,24 @@
-// import { AiOutlineMenu } from 'react-icons/ai';
-import React from 'react';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-} from '../ui/sheet';
-import MenuIcon from '@/public/SVG components/menu';
-import Search from './search';
+"use client";
+
+import React, { useEffect } from "react";
+import { useTheme } from "next-themes";
+import HeaderMobile from "./header-mobile";
+
 const Header: React.FC = () => {
+  const { systemTheme, setTheme } = useTheme();
+
+  useEffect(() => {
+    if (systemTheme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("light");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div className="w-full p-6 md:hidden">
-      <Sheet>
-        <SheetTrigger>
-          <MenuIcon />
-        </SheetTrigger>
-        <SheetContent>
-          <SheetHeader className="mt-5">
-            <Search />
-            <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription>
-          </SheetHeader>
-        </SheetContent>
-      </Sheet>
+    <div className="">
+      <HeaderMobile />
     </div>
   );
 };
