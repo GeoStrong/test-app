@@ -22,7 +22,7 @@ const ThemeIcon: React.FC<{ clickHanlder: () => void }> = ({
           //   stroke="#6A6A6A"
           strokeWidth="1.25"
           strokeLinecap="round"
-          stroke-Linejoin="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>
