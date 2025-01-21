@@ -132,7 +132,24 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: Inter, sans-serif;
   }
+
+  .swiper-pagination-bullet {
+    @apply block h-1 w-7 rounded-full bg-[#D9D9D9];
+  }
+}
+
+.swiper-pagination {
+  @apply flex items-center justify-center gap-2 p-4;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-[#343434];
+}
+
+.swiper-slide {
+  @apply w-2/3;
 }
