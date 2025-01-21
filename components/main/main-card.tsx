@@ -2,21 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { BsFillTriangleFill } from "react-icons/bs";
 import verifiedIcon from "@/public/assets/verified-icon.svg";
-
-interface MainCardProps {
-  children: React.ReactNode;
-  price: number | string;
-  marketCap: number | string;
-  number?: number | string;
-  isProfit?: boolean;
-  verified?: boolean;
-  isCardMain?: boolean;
-}
+import { MainCardProps } from "./main";
 
 const MainCard: React.FC<MainCardProps> = ({
   children,
   isCardMain,
   verified,
+  name,
   number,
   isProfit,
   price,
@@ -24,14 +16,14 @@ const MainCard: React.FC<MainCardProps> = ({
 }) => {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full transform cursor-pointer transition-all duration-300 hover:scale-105">
         {children}
-        <div className="dark:bg-dark-150 flex flex-col gap-1 rounded-b-xl bg-white p-4 shadow">
-          <div className="flex w-full items-center justify-between pr-8 font-semibold">
+        <div className="dark:bg-dark-150 flex h-36 flex-col gap-1 rounded-b-xl bg-white p-4 shadow">
+          <div className="flex h-10 w-full items-center justify-between font-semibold xl:pr-5">
             <h3
               className={`${isCardMain ? "text-xl" : "text-base"} flex items-center`}
             >
-              VIRTUAL
+              {name.toUpperCase()}
               {verified && (
                 <Image
                   src={verifiedIcon.src}
@@ -56,7 +48,7 @@ const MainCard: React.FC<MainCardProps> = ({
               </p>
             )}
           </div>
-          <div className="flex w-full items-center justify-between pr-8 font-semibold">
+          <div className="flex w-full items-center justify-between font-semibold xl:pr-5">
             <p className="">
               <span className="text-sm font-normal text-[#545454] dark:text-white">
                 Price
