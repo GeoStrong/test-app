@@ -1,8 +1,14 @@
 import { BsCommand } from "react-icons/bs";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import searchIcon from "@/public/assets/search.svg";
 
 const HeaderSearch: React.FC = () => {
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    searchRef.current?.focus();
+  }, []);
+
   return (
     <div className="relative w-full">
       <input

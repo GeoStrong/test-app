@@ -11,7 +11,7 @@ import Search from "./header-search";
 import { Button } from "../ui/button";
 import Socials from "./header-socials";
 import logoImg from "@/public/assets/logo.svg";
-import MenuIcon from "@/public/svg components/menuIcon";
+import MenuIcon from "@/public/svg-components/menuIcon";
 import Image from "next/image";
 
 const HeaderMobile: React.FC = () => {

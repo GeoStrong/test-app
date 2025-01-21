@@ -3,9 +3,9 @@
 import Link from "next/link";
 import React from "react";
 import { useTheme } from "next-themes";
-import TelegramIcon from "@/public/svg components/telegramIcon";
-import TwitterIcon from "@/public/svg components/twitterIcon";
-import ThemeIcon from "@/public/svg components/themeIcon";
+import TelegramIcon from "@/public/svg-components/telegramIcon";
+import TwitterIcon from "@/public/svg-components/twitterIcon";
+import ThemeIcon from "@/public/svg-components/themeIcon";
 
 const HeaderSocials: React.FC = () => {
   const { theme, setTheme } = useTheme();
