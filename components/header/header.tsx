@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 import HeaderMobile from "./header-mobile";
+import HeaderDesktop from "./header-dekstop";
 
 const Header: React.FC = () => {
   const { systemTheme, setTheme } = useTheme();
@@ -19,6 +20,7 @@ const Header: React.FC = () => {
   return (
     <div className="">
       <HeaderMobile />
+      <HeaderDesktop />
     </div>
   );
 };

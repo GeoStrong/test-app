@@ -7,11 +7,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
-import Search from "./search";
+import Search from "./header-search";
 import { Button } from "../ui/button";
-import Socials from "./socials";
-import logoImg from "@/public/logo.svg";
-import MenuIcon from "@/public/SVG components/menuIcon";
+import Socials from "./header-socials";
+import logoImg from "@/public/assets/logo.svg";
+import MenuIcon from "@/public/svg components/menuIcon";
 import Image from "next/image";
 
 const HeaderMobile: React.FC = () => {
@@ -24,11 +24,11 @@ const HeaderMobile: React.FC = () => {
           </SheetTrigger>
           <SheetContent className="dark:bg-dark-100">
             <SheetHeader className="mt-5 flex h-3/4 flex-col items-center justify-between">
-              <SheetTitle>
+              <SheetTitle className="w-full">
                 <Search />
               </SheetTitle>
               <SheetDescription className="w-full">
-                <Button className="mb-4 w-full rounded-sm p-6 text-base">
+                <Button className="dark:bg-dark-150 mb-4 w-full rounded-sm p-6 text-base dark:text-white">
                   Start Buying
                 </Button>
                 <Socials />
@@ -36,7 +36,7 @@ const HeaderMobile: React.FC = () => {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <div className="dark:rounded-md dark:bg-white dark:p-2">
+        <div className="dark:bg-dark-150 dark:rounded-md dark:p-2">
           <Image src={logoImg.src} alt="logo" width={129} height={23} />
         </div>
         <div></div>
